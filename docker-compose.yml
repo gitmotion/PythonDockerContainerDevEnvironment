@@ -7,3 +7,8 @@ services:
       - 80:80
     volumes:
       - .:/code
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:alpine
